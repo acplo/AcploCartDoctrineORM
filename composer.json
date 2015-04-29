@@ -1,0 +1,32 @@
+{
+    "name": "acplo/acplocart-doctrine-orm",
+    "description": "Addon module form AcploCart to persist the cart with doctrine",
+    "type": "library",
+    "keywords": [
+        "doctrine",
+        "acplocart",
+        "module",
+        "library",
+        "zf2"
+    ],
+    "homepage": "https://github.com/stefanorg",
+    "authors": [
+        {
+            "name": "Stefano Corallo",
+            "email": "stefanorg@gmail.com",
+            "homepage": "http://stefanorg.github.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "acplo/acplocart": "0.0.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "AcploCartDoctrineORM": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
