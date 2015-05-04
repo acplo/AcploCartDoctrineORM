@@ -19,7 +19,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "acplo/acplocart": "0.0.1"
+        "acplo/acplocart": "0.0.1",
+        "acplo/acplolog": "0.0.1"
     },
     "autoload": {
         "psr-0": {
