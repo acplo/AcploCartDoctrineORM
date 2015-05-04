@@ -1,9 +1,9 @@
 <?php
 namespace AcploCartDoctrineORM\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity
@@ -18,14 +18,12 @@ class Cart implements CartEntityInterface{
     protected $id;
 
     /**
-     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      * @var date
      */
     protected $created;
     
     /**
-     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
      * @var date
      */
@@ -35,8 +33,8 @@ class Cart implements CartEntityInterface{
      * @ORM\OneToMany(targetEntity="CartItem", mappedBy="cart", cascade={"remove"})
      */
     protected $items;
-
-
+    
+    
     function __construct($id){
         $this->id = $id;
         $this->items = new ArrayCollection();

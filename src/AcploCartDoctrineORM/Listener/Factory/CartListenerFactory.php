@@ -16,7 +16,8 @@ class CartListenerFactory implements FactoryInterface
     {
 	$service = $sm->get('acplocartdoctrineorm_cart_service');
 	$listener = new CartListener($service);
-	$listener->setLogger($sm->get('jcommerce.log'));
+	$datalog = date('Y-m-d', time()) . "_acplocommerce.log";
+	$listener->setLogger(\AcploLog\Log\StaticLogger::getInstance($datalog));
 	return $listener;
     }
 
